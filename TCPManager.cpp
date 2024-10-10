@@ -23,6 +23,7 @@ void TCPManager::sendMessage(QString msg)
     // _worker->SendMessage(msg);
     emit sendNotification(msg);
     _serverMessages.append(msg);
+    qDebug()<<"_serverMessages "<<msg;
     emit serverMessagesChanged();
 }
 
